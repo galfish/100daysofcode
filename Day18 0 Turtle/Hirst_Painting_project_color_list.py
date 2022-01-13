@@ -1,22 +1,25 @@
 import colorgram as cg
-
-colors = cg.extract("image.jpg", 30)
+import random
+"""
 rgb_colors = []
-
+colors = cg.extract("image.jpg", 30)
 for color in colors:
-    rgb_colors.append(color.rgb)
+    r = color.rgb.r
+    g = color.rgb.g
+    b = color.rgb.b
+    new_color = (r, g, b)
+    rgb_colors.append(new_color)
+"""
 
-print (rgb_colors)
+color_list = [(246, 245, 243), (233, 239, 246), (246, 239, 242), (240, 246, 243), (132, 166, 205), (221, 148, 106),
+              (32, 42, 61), (199, 135, 148), (166, 58, 48), (141, 184, 162), (39, 105, 157), (237, 212, 90),
+              (150, 59, 66), (216, 82, 71), (168, 29, 33), (235, 165, 157), (51, 111, 90), (35, 61, 55), (156, 33, 31),
+              (17, 97, 71), (52, 44, 49), (230, 161, 166), (170, 188, 221), (57, 51, 48), (184, 103, 113),
+              (32, 60, 109), (105, 126, 159), (175, 200, 188), (34, 151, 210), (65, 66, 56)]
 
-def draw_random_dots_in_rectangle(origin, number_of_dots, size=RECTANGLE_SIZE):
-    # loops number_of_dots times
-    for _ in range(number_of_dots):
-        # generate a random position inside of given rectangle
-        # using min/max, because of possible negative coordinates
-        # weakness - does also place dots on the edges of the rectangle
-        rand_x = randint(min(origin[0], origin[0] + size[0]), max(origin[0], origin[0] + size[0]))
-        rand_y = randint(min(origin[1], origin[1] + size[1]), max(origin[1], origin[1] + size[1]))
-        # moves to the random position
-        move_turtle_to((rand_x, rand_y))
-        # creates a dot
-        t.dot(DOT_DIAMETER)
+random_color = color_list[random.randint(0, 30)]
+
+
+
+#    random_color = (r, g, b)
+ #   return random_color

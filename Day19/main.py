@@ -17,7 +17,7 @@ def clear_screen():
     tim.goto(0, 0)
     tim.pendown()
 
-in.py
+
 
 screen.listen()
 
